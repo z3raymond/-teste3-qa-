@@ -1,0 +1,13 @@
+{
+  "name": "k6-api-performance-test",
+  "version": "1.0.0",
+  "description": "Performance testing for JSONPlaceholder API using K6",
+  "scripts": {
+    "test": "k6 run tests/api-performance.js",
+    "test:load": "k6 run --vus 10 --duration 30s tests/api-performance.js",
+    "test:stress": "k6 run --vus 50 --duration 60s tests/api-performance.js"
+  },
+  "devDependencies": {
+    "k6": "^0.47.0"
+  }
+}
